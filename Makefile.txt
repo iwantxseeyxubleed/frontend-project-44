@@ -1,0 +1,10 @@
+.PHONY: install publish run
+
+install:
+	npm ci
+
+publish:
+	npm publish --dry-run
+
+run:
+	node bin/brain-games.js
