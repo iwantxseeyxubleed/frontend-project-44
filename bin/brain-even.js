@@ -22,7 +22,7 @@ while (correctAnswers < 3) {
     console.log('Correct!');
     correctAnswers++;
   } else {
-    console.log(`The '${answer}' is wrong answer ;(. The correct answer was '${isEven ? 'yes' : 'no'}'.`);
+    console.log(`'${answer}' is the wrong answer ;(. The correct answer was '${isEven ? 'yes' : 'no'}'.`);
     console.log(`Let's try again, ${name}!`);
   }
 }
