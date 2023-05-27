@@ -5,12 +5,11 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "hexlet/project-action@release": "npm run release-script",
+    "hexlet/project-action@release": "command-to-run-your-release-script",
     "test": "echo \"Error: no test specified\" && exit 1",
     "brain-games": "node bin/brain-games.js",
     "brain-progression": "node bin/brain-progression.js",
-    "brain-prime": "node bin/brain-prime.js",
-    "hexlet/project-action@release": "command-to-run-your-release-script"
+    "brain-prime": "node bin/brain-prime.js"
   },
   "bin": {
     "brain-games": "bin/brain-games.js",
@@ -22,7 +21,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "brain-even": "^0.1.12",
+    "brain-even": "^1.0.0",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
