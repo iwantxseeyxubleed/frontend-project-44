@@ -1,5 +1,6 @@
+#!/usr/bin/env node
 import {
-  getRandomNumber, getAndCheckAnswer, getUserName, getUserInput
+  getRandomNumber, getAndCheckAnswer,
 } from '../index.js';
 
 let correctProgressionAnswer = '';
@@ -23,7 +24,6 @@ function getProgressionQuestion() {
 }
 
 export default function executeProgression() {
-  getUserName();
   console.log('What number is missing in the progression?');
   for (let i = 0; i < global.questionsNumber; i += 1) {
     if (!getAndCheckAnswer(getProgressionQuestion(), correctProgressionAnswer, i)) {
