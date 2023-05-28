@@ -17,7 +17,7 @@ export default function executeEven() {
 
     const userAnswer = getAndCheckAnswer(questionNumber, correctAnswer);
     if (userAnswer !== correctAnswer) {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+      console.log(`'${userAnswer}' is the wrong answer ;(. The correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${global.userName}!`);
       return;
     }
