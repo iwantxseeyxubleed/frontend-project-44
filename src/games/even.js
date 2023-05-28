@@ -1,16 +1,35 @@
-import gameLogics from '../index.js';
-import { getRandomNumber } from '../random-number.js';
+import {
+  gameLogics, getRandomNumber, greetUser, congratulateUser,
+} from '../index.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const isEven = (number) => (number % 2 === 0);
+function isEven(number) {
+  return number % 2 === 0;
+}
 
-const getAnswerAndQuestion = () => {
-  const questionInGame = getRandomNumber();
-  const rightAnswer = isEven(questionInGame) ? 'yes' : 'no';
-  return [questionInGame, rightAnswer];
-};
+function executeEven() {
+  greetUser(description);
+
+  let correctAnswersCount = 0;
+  while (correctAnswersCount < 3) {
+    const questionNumber = getRandomNumber();
+    const correctAnswer = isEven(questionNumber) ? 'yes' : 'no';
+
+    const userAnswer = getAndCheckAnswer(questionNumber, correctAnswer);
+    if (userAnswer !== correctAnswer) {
+      console.log(`'${userAnswer}' is the wrong answer ;(. The correct answer was '${correctAnswer}'.`);
+      console.log(`Let's try again, ${global.userName}!`);
+      return;
+    }
+
+    console.log('Correct!');
+    correctAnswersCount += 1;
+  }
+
+  congratulateUser();
+}
 
 export default function even() {
-  gameLogics(description, getAnswerAndQuestion);
+  executeEven();
 }
