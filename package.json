@@ -1,16 +1,25 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
+  "type": "module",
   "description": "[![Actions Status](https://github.com/iwantxseeyxubleed/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/iwantxseeyxubleed/frontend-project-44/actions)",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "hexlet/project-action@release": "npm run release-script",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "brain-games": "node bin/brain-games.js",
-    "brain-progression": "node bin/brain-progression.js",
-    "brain-prime": "node bin/brain-prime.js",
-    "hexlet/project-action@release": "command-to-run-your-release-script"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/iwantxseeyxubleed/frontend-project-44.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iwantxseeyxubleed/frontend-project-44/issues"
+  },
+  "homepage": "https://github.com/iwantxseeyxubleed/frontend-project-44#readme",
+  "dependencies": {
+    "ci": "^2.2.0",
+    "readline-sync": "^1.4.10"
   },
   "bin": {
     "brain-games": "bin/brain-games.js",
@@ -18,26 +27,12 @@
     "brain-calc": "bin/brain-calc.js",
     "brain-gcd": "bin/brain-gcd.js",
     "brain-progression": "bin/brain-progression.js",
-	"brain-prime":"bin/brain-prime.js"
+    "brain-prime": "bin/brain-prime.js"
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "brain-even": "^0.1.12",
-    "readline-sync": "^1.4.10"
-  },
+  "keywords": [],
   "devDependencies": {
-    "eslint": "^8.39.0",
+    "eslint": "^8.29.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.27.5",
-    "esm": "^3.2.25"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://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@github.com/iwantxseeyxubleed/frontend-project-44.git"
-  },
-  "bugs": {
-    "url": "https://github.com/iwantxseeyxubleed/frontend-project-44/issues"
-  },
-  "homepage": "https://github.com/iwantxseeyxubleed/frontend-project-44#readme"
+    "eslint-plugin-import": "^2.26.0"
+  }
 }

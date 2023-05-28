@@ -1,19 +1,29 @@
-import gameLogics from '../index.js';
-import { getRandomNumber } from '../random-number.js';
-const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-const isNumberPrime = (number) => {
-  for (let i = 2; i < number; i += 1) {
-    if (number % i === 0 || number === 1) {
-      return false;
+#!/usr/bin/env node
+import {
+  getRandomNumber, getAndCheckAnswer,
+} from '../index.js';
+
+function getCorrectPrimeAnswer(question) {
+  if (question === 1) {
+    return 'no';
+  }
+  if (question === 2) {
+    return 'yes';
+  }
+  for (let i = 2; i < question; i += 1) {
+    if (question % i === 0) {
+      return 'no';
     }
   }
-  return true;
-};
-const getAnswerAndQuestion = () => {
-  const questionInGame = getRandomNumber();
-  const rightAnswer = isNumberPrime(questionInGame) ? 'yes' : 'no';
-  return [questionInGame, rightAnswer];
-};
-export default function prime() {
-  gameLogics(description, getAnswerAndQuestion);
+  return 'yes';
+}
+
+export default function executePrime() {
+  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+  for (let i = 0; i < global.questionsNumber; i += 1) {
+    const questionPrime = getRandomNumber();
+    if (!getAndCheckAnswer(questionPrime, getCorrectPrimeAnswer(questionPrime), i)) {
+      break;
+    }
+  }
 }
