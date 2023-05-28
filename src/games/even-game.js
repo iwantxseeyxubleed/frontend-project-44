@@ -1,22 +1,30 @@
 #!/usr/bin/env node
 import {
-  getRandomNumber, getAndCheckAnswer,
+  getRandomNumber, getAndCheckAnswer, greetUser, congratulateUser,
 } from '../index.js';
 
-function getCorrectEvenAnswer(question) {
-  if (question % 2 === 0) {
-    return 'yes';
-  }
-  return 'no';
+function isEven(number) {
+  return number % 2 === 0;
 }
 
 export default function executeEven() {
-  console.log('Welcome to the Brain Games!');
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  for (let i = 0; i < global.questionsNumber; i += 1) {
-    const questionEven = getRandomNumber();
-    if (!getAndCheckAnswer(questionEven, getCorrectEvenAnswer(questionEven), i)) {
-      break;
+  greetUser('Answer "yes" if the number is even, otherwise answer "no".');
+
+  let correctAnswersCount = 0;
+  while (correctAnswersCount < 3) {
+    const questionNumber = getRandomNumber();
+    const correctAnswer = isEven(questionNumber) ? 'yes' : 'no';
+
+    const userAnswer = getAndCheckAnswer(questionNumber, correctAnswer);
+    if (userAnswer !== correctAnswer) {
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+      console.log(`Let's try again, ${global.userName}!`);
+      return;
     }
+
+    console.log('Correct!');
+    correctAnswersCount += 1;
   }
+
+  congratulateUser();
 }
