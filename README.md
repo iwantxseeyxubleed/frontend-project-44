@@ -40,7 +40,7 @@ brain-prime
 
 ### Запуск "brain-even"
 
-[![asciicast](https://asciinema.org/a/587676)
+https://asciinema.org/a/587676
 
 ## Игра: "Калькулятор"
 
@@ -51,7 +51,7 @@ brain-prime
 
 ### Запуск: "brain-calc"
 
-[![asciicast](https://asciinema.org/a/587681)
+https://asciinema.org/a/587681
 
 ## Игра: "НОД"
 
@@ -62,7 +62,7 @@ brain-prime
 
 ### Запуск: "brain-gcd"
 
-[![asciicast](https://asciinema.org/a/587739)
+https://asciinema.org/a/587739
 
 ## Игра: "Арифметическая прогрессия"
 
@@ -73,7 +73,7 @@ brain-prime
 
 ### Запуск: "brain-progression"
 
-[![asciicast](https://asciinema.org/a/587744)
+https://asciinema.org/a/587744
 
 ## Игра: "Простое ли число?"
 
@@ -84,4 +84,4 @@ brain-prime
 
 ### Запуск: "brain-prime"
 
-[![asciicast](https://asciinema.org/a/587746)
+https://asciinema.org/a/587746
