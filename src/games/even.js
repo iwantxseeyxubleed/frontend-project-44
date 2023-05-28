@@ -1,5 +1,7 @@
+#!/usr/bin/env node
+
 import {
-  gameLogics, getRandomNumber, greetUser, congratulateUser, getAndCheckAnswer,
+  gameLogics, getRandomNumber, greetUser, congratulateUser,
 } from '../index.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
@@ -16,7 +18,7 @@ function executeEven() {
     const questionNumber = getRandomNumber();
     const correctAnswer = isEven(questionNumber) ? 'yes' : 'no';
 
-    const userAnswer = getAndCheckAnswer(questionNumber);
+    const userAnswer = getAndCheckAnswer(questionNumber, correctAnswer);
     if (userAnswer !== correctAnswer) {
       console.log(`'${userAnswer}' is the wrong answer ;(. The correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${global.userName}!`);
