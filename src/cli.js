@@ -1,5 +1,5 @@
-const greeting = (name) => {
-  console.log(`Hello, ${name}!`);
-};
+const getRandomNumber = (min = 0, max = 20) => (
+  Math.floor(Math.random() * (max - min + 1)) + min
+);
 
-export default greeting;
+export default getRandomNumber;
