@@ -8,7 +8,7 @@ function isEven(number) {
 }
 
 export default function executeEven() {
-  greetUser('Answer "yes" if the number is even, otherwise answer "no".');
+  greetUser('Answer "yes" if the number is even, otherwise answer "no"');
 
   let correctAnswersCount = 0;
   while (correctAnswersCount < 3) {
