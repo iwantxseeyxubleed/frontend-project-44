@@ -1,6 +1,5 @@
-#!/usr/bin/env node
 import {
-  getRandomNumber, getAndCheckAnswer,
+  getRandomNumber, getAndCheckAnswer, getUserName, getUserInput
 } from '../index.js';
 
 function getCorrectPrimeAnswer(question) {
@@ -19,10 +18,11 @@ function getCorrectPrimeAnswer(question) {
 }
 
 export default function executePrime() {
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+  getUserName();
+  console.log('Answer "yes" if the number is prime, otherwise answer "no".');
   for (let i = 0; i < global.questionsNumber; i += 1) {
     const questionPrime = getRandomNumber();
-    if (!getAndCheckAnswer(questionPrime, getCorrectPrimeAnswer(questionPrime), i)) {
+    if (!getAndCheckAnswer(questionPrime.toString(), getCorrectPrimeAnswer(questionPrime), i)) {
       break;
     }
   }
