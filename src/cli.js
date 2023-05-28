@@ -1,5 +1,5 @@
-const getRandomNumber = (min = 0, max = 20) => (
-  Math.floor(Math.random() * (max - min + 1)) + min
-);
+import readlineSync from 'readline-sync';
 
-export default getRandomNumber;
+export default function getUserInput(question) {
+  return readlineSync.question(question);
+}

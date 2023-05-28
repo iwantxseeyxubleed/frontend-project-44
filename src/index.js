@@ -2,7 +2,7 @@
 import readlineSync from 'readline-sync';
 
 global.questionsNumber = 3;
-const maxRandomNumber = 100;
+const maxRandomNumber = 100; // less than it and not equal
 
 export function getUserInput(question) {
   return readlineSync.question(question);
