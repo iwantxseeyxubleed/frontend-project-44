@@ -11,7 +11,8 @@ function getCorrectEvenAnswer(question) {
 }
 
 export default function executeEven() {
-  console.log('Answer "yes" if number odd, otherwise answer "no".');
+  console.log('Welcome to the Brain Games!');
+  console.log('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i < global.questionsNumber; i += 1) {
     const questionEven = getRandomNumber();
     if (!getAndCheckAnswer(questionEven, getCorrectEvenAnswer(questionEven), i)) {
